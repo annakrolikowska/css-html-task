@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://cv.parleto.io/files/tasks/ui.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>UI/UX Task</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/1fec316bf9.js" crossorigin="anonymous"></script>
+  <link href="./material-components-web.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
+    
+  <body cz-shortcut-listen="true">
+    <header class="header">
+      <div class="nav-wrap">
+        <label for="menu-switcher" class="header__label">
+          <i class="header__icon fas fa-bars"></i>
+        </label>
+        <input type="checkbox" class="header__hamburger" id="menu-switcher">
+        <nav>
+          <ul class="nav">
+            <li class="nav__item"><a href="/#">Dashboard</a></li>
+            <li class="nav__item"><a href="/#">Reports</a></li>
+            <li class="nav__item"><a href="/#">Expenses</a></li>
+            <li class="nav__item"><a href="/#">Settings</a></li>
+            <li class="nav__item"><a href="/#">Profile</a></li>
+            <li class="nav__item"><a href="/#">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__text-container">
+        <h1><span>Expense</span>Manager</h1>
+        <h2>Manage your expenses easily</h2>
+      </div>
+    </header>
+    <section class="body">
+      <section class="expenses__box">
+        <h2>Expenses</h2>
+        <form class="expenses-form">
+          <label>
+              <span class="range">
+                <input type="date" placeholder="&nbsp;" class="expenses-form__input expenses-form__input--periodStart">
+                <span class="dash">-</span>
+                <input type="date" placeholder="&nbsp;" class="expenses-form__input expenses-form__input--periodEnd">
+                <span class="expenses-form__label">Period</span> 
+              </span> 
+          </label>
+          <label>
+            <select class="expenses-form__input expenses-form__input--category">
+              <option value=""></option>
+              <option value="food">food</option>
+              <option value="car">car</option>
+              <option value="animals">animals</option>
+              <option value="entertainment">entertainment</option>
+            </select>
+            <span class="expenses-form__label">Category</span>
+          </label>
+          <label>
+            <input type="text" placeholder="&nbsp;" class="expenses-form__input expenses-form__input--name">
+            <span class="expenses-form__label">Name</span>
+          </label>
+          <button class="form-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <div class="expense__container">
+          <div class="expense__item expense__item--prototype">
+            <div class="expense__name">coffee prototype</div>
+            <div class="expense__price"><span class="price__amount">40</span><span class="price__currency">  PLN</span></div>
+           <div class="expense__icon-container">
+             <img class="expense__icon" src="./icons/icon-2.png" alt="icon"/>
+           </div>
+            <div class="expense__category">food</div>
+            <div class="expense__date">2022-07-16</div>
+          </div>
+        </div>
+        <div class="pagination">
+        </div>
+      </section>
+      <section class="summary-box">
+        <h2>Summary</h2>
+        <h3>Total: <span class="total-price">797</span> PLN</h3>
+        <section class="summary-box_period">
+          <h3>Per period</h3>
+          </div>
+        </section>
+        <section class="summary-box_category">
+          <h3>Per category</h3>
+          <div class="sum_category__item">
+            <div class="date">food</div>
+            <div class="amount">97</div>
+            <div class="currency">PLN</div>
+          </div>
+          <div class="sum_category__item">
+            <div class="date">car</div>
+            <div class="amount">700</div>
+            <div class="currency">PLN</div>
+          </div>
+          <div class="sum_category__item">
+            <div class="date">animals</div>
+            <div class="amount">700</div>
+            <div class="currency">PLN</div>
+          </div>
+          <div class="sum_category__item">
+            <div class="date">entertainment</div>
+            <div class="amount">700</div>
+            <div class="currency">PLN</div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
