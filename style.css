@@ -1,0 +1,353 @@
+:root {
+    --main-bg-color: #f2f2f2;
+    --grayed-bg-color:#E1DFDF;
+    --main-text-color: #1b1b1b;
+    --sub-text-color: #9a9a9a;
+    --grayed-text-color: #959595;
+    --active-text-color: #00ddc2;
+    --main-border-color: #ececec;
+    --color-white: #fff;
+    --color-black: #000;
+    --page-margin: 10%;
+    --font-primary: 'Catamaran', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--main-text-color);
+    margin: 0 var(--page-margin);
+
+}
+ /* ____ header _____ */
+.nav {
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    list-style: none;
+    padding: 40px 0px;
+    visibility: none;
+    animation: appear-top 1s .5s both;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--active-text-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    text-shadow: 0 0 15px var(--active-text-color);
+}
+
+.header__label,
+.header__hamburger {
+    display: none;
+}
+
+h1 {
+    font-size: 3.8rem;
+    font-weight: 900;
+}
+
+h1 span {
+    color: var(--active-text-color);
+}
+
+.header h2 {
+    font-size: calc(1rem + 1.2vw);
+    font-weight: 800;
+    line-height: 1.1em;
+    letter-spacing: 1px;
+}
+
+/*  ____ expenses  ____ */
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;;
+}
+
+ /* ____ expenses form _____ */
+
+.expenses-form, .range {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.range {
+    gap: 20px;
+    position: relative;
+}
+
+.range span{
+    font-size: 1.5rem;
+}
+
+.expenses-form label {
+    position: relative;
+}
+
+.expenses-form .expenses-form__label {
+    position: absolute;
+    margin-top: -3px;
+    left: 16px;
+    top: 0;
+    color: var(--grayed-text-color);
+    transition: all 0.2s ease;
+    line-height: 0.9;
+    font-size: 14px;
+    background: var(--color-white);
+}
+
+.expenses-form__input {
+    padding: 12px 8px 8px;
+    border: 0.5px solid var(--main-border-color);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.3s; 
+    width: 153px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.expenses-form__input:focus-visible,   .expenses-form__input:hover {
+    border: 1px solid var(--active-text-color);
+    outline: none;
+}
+
+.expenses-form__input:focus-visible +   .expenses-form__label {
+    color: var(--active-text-color);    
+}
+
+.form-button {
+    padding:  7px;
+    border: 0.5px solid var(--main-border-color);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.3s; 
+    width: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-button:hover {
+    color: var(--active-text-color);
+}
+
+ /* ____ expenses items _____ */
+.expense__container {
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+ .expense__item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    border: 1px solid var(--main-border-color);
+    overflow: hidden;
+    position: relative;
+    width: 230px;
+    height: 238px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);/
+}
+
+ .expense__item::before {
+    content: "";
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: var(--active-text-color);
+    position: absolute;
+    left: -42px;
+}
+
+ .expense__name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--active-text-color);
+    text-transform: uppercase;
+}
+
+ .price__amount {
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+ .expense__category {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+ .icon-container {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+}
+
+ /* ____ summary _____ */
+
+ .summary-box {
+   width: 270px;
+    height: fit-content;
+    background-color: var(--grayed-bg-color) ;
+    padding: 40px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+ .summary-box h2 {
+    font-weight: 900;
+}
+
+ .summary-box h3:nth-child(2) {
+    font-size: 1.25rem;
+}
+
+ .total-price {
+    color: var(--active-text-color);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+ .summary-box .amount {
+    font-weight: 800;
+}
+
+ .sum_period__item,  .sum_category__item {
+    display: flex;
+    gap: 10px;
+}
+
+ /* ___ pagination ___ */
+ .pagination button {
+    border: none;
+    padding: 8px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pagination .active {
+    color: var(--active-text-color);
+}
+
+@keyframes appear-top {
+    0% {
+        transform: translate3d(0,-100%,0);
+        visibility: visible;
+        display: none;
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        flex-direction: column;
+        animation: slideInFromTop 0.5s ease-in-out;
+        z-index: 2;
+        height: 100vh;
+        background-color: #000;
+    }
+
+    .header__label {
+        display: flex;
+        padding: 10px;
+        justify-content: right;
+        margin-right: 10px;
+        position: relative;
+        font-size: 1.4rem;
+        z-index: 3;
+    }
+
+    .nav__item a {
+        color: var(--color-white);
+        font-size: 2em;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all .2s ease-in-out;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    }
+
+    .nav__item a:hover {
+        color: var(--active-text-color);
+    }
+
+    .body {
+        z-index: -1;
+        position: relative;
+    }
+ 
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 100px;
+    }
+
+    .nav-wrap {
+        position: fixed;
+        width: 90%;
+    }
+
+
+    .header__hamburger:checked ~  nav {
+        display: flex;
+        flex-direction: column;
+    }
+        
+   h1 {
+        font-size: 2.1rem;
+   }
+
+   .body {
+        flex-direction: column-reverse;
+   }
+
+   .expenses-form {
+        display: block;
+        text-align: center;
+   }
+
+   .range .dash {
+        display: none;
+   }
+
+   .range {
+        display: block;
+   }
+
+   .expenses-form__input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        max-height: 43px;
+   }
+
+   .expense__container {
+        justify-content: center;
+   }
+
+   .summary-box {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
